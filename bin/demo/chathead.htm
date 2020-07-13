@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+.p9 {  font-size: 11pt; line-height: 21pt}
+a:visited {  color: #0000FF; text-decoration: none}
+a:link {  color: #0000FF; text-decoration: none}
+a:hover {  color: #FF0000}
+-->
+</style></head>
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+var autoScrollOn = 1;
+var scrollOnFunction;
+var scrollOffFunction;
+
+function scrollWindow( )
+{
+  if(autoScrollOn == 1)
+  {
+    this.scroll(0, 65000);
+    setTimeout('scrollWindow()',200);
+  }
+}
+
+function scrollOn()
+{
+  autoScrollOn = 1;
+  scrollWindow();
+}
+
+function scrollOff()
+{
+	autoScrollOn = 0;
+}
+
+function StartUp()
+{
+  this.onblur  = scrollOnFunction;
+  this.onfocus = scrollOffFunction;
+  scrollWindow( );
+}
+
+scrollOnFunction = new Function('scrollOn()')
+scrollOffFunction = new Function('scrollOff()')
+
+StartUp();
+
+//--></script>
+<body bgcolor="#FFFFFF">
+<!--begin-->
+ 
+<!--end-->
+<span class="p9"><center>欢迎光临<font color=#ff0000><big>IsaChat聊天室</big></font>！ 
+请文明聊天，切勿发布有关色情、政治、黑客等的信息。
+<br></center>
+<hr size="1">
+</span></p>
+<p class="p9" align="left">

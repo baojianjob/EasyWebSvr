@@ -1,0 +1,296 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TRAY MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "显示主窗口",                  IDM_TRAY_MAINWND
+        MENUITEM "浏览主页",                    IDM_TRAY_BROWSE
+        MENUITEM "关于...",                     IDM_TRAY_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "关闭服务器",                  IDM_TRAY_EXIT
+        MENUITEM SEPARATOR
+        MENUITEM "启动服务器",                  IDM_TRAY_STARTSERVER
+        MENUITEM "停止服务器",                  IDM_TRAY_STOPSERVER
+        MENUITEM "重启服务器",                  IDM_TRAY_RESTARTSERVER
+        MENUITEM SEPARATOR
+        POPUP "日志"
+        BEGIN
+            MENUITEM "清空日志",                    IDM_TRAY_CLEARLOG
+            MENUITEM "保存日志",                    IDM_TRAY_SAVELOG
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "设置...",                     IDM_TRAY_CONFIG
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 205, 113
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于"
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,149,9,50,14
+    ICON            IDI_ICON_MAIN,IDC_STATIC,5,5,21,21
+    LTEXT           "EasyWebServer 1.92 版",IDC_STATIC,35,12,101,8
+    LTEXT           "版权所有 (C) 2007.11  baojianjob@tom.com",IDC_STATIC,35,
+                    34,161,8
+    LTEXT           "",IDC_STATIC_ABOUT,5,49,194,58,0,WS_EX_STATICEDGE
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 247, 188
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "服务器设置"
+FONT 9, "宋体", 400, 0, 0x86
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,154,169,39,14
+    PUSHBUTTON      "取消",IDCANCEL,202,169,39,14
+    CONTROL         "",IDC_TAB_CONFIG,"SysTabControl32",WS_TABSTOP,5,5,236,
+                    158
+END
+
+IDD_CONFIG_MAIN DIALOGEX 0, 0, 240, 146
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_ROOTDIR,44,19,156,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "...",IDC_BTN_BROWSE,204,19,15,12,BS_CENTER | BS_VCENTER | 
+                    BS_FLAT
+    EDITTEXT        IDC_EDIT_PORT,44,39,32,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "主目录:",IDC_STATIC,13,21,29,8
+    LTEXT           "端口号:",IDC_STATIC,13,41,29,8
+    GROUPBOX        "服务器",IDC_STATIC,5,5,221,54
+    GROUPBOX        "网络连接",IDC_STATIC,5,66,221,53
+    LTEXT           "最大连接数:",IDC_STATIC,13,83,46,8
+    EDITTEXT        IDC_EDIT_MAXTHREADNUM,59,81,41,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    LTEXT           "超时时间:",IDC_STATIC,13,101,46,8
+    EDITTEXT        IDC_EDIT_TIMEOUT,59,99,41,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "开机自动运行",IDC_CHECK_AUTORUN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,125,62,8
+    LTEXT           "(单位:1/1000秒)",IDC_STATIC,105,101,63,8
+    LTEXT           "(0为不限制)",IDC_STATIC,105,83,63,8
+END
+
+IDD_CONFIG_DOC DIALOGEX 0, 0, 239, 147
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_DEFAULTHTML,12,32,206,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "允许目录浏览",IDC_CHECK_ENABLESHOWDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,74,67,8
+    CONTROL         "总是显示目录内容(忽略缺省文档列表)",IDC_RADIO_SHOWDIR1,
+                    "Button",BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,23,
+                    89,157,8
+    CONTROL         "仅当以上缺省文档列表都没有找到时",IDC_RADIO_SHOWDIR2,
+                    "Button",BS_AUTORADIOBUTTON | WS_DISABLED,23,104,157,8
+    GROUPBOX        "缺省文档",IDC_STATIC,5,5,221,47
+    GROUPBOX        "目录浏览",IDC_STATIC,5,59,221,62
+    LTEXT           "缺省文档列表:",IDC_STATIC,12,20,92,7
+END
+
+IDD_CONFIG_RIGHTS DIALOGEX 0, 0, 240, 146
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "允许执行CGI程序",IDC_CHECK_ENABLECGI,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,22,92,8
+    CONTROL         "允许执行ISAPI程序",IDC_CHECK_ENABLEISAPI,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,40,92,8
+    CONTROL         "缓存ISAPI",IDC_CHECK_ISAPICACHE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,57,92,8
+    CONTROL         "允许执行脚本（PHP、ASP等）",IDC_CHECK_ENABLESCRIPT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,74,119,8
+    GROUPBOX        "执行权限",IDC_STATIC,5,5,221,105
+END
+
+IDD_CONFIG_MAP DIALOGEX 0, 0, 240, 146
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_TABSTOP
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "添加(&D)",IDC_BTN_ADD,12,109,38,14
+    PUSHBUTTON      "编辑(&E)",IDC_BTN_EDIT,62,109,38,14
+    PUSHBUTTON      "删除(&R)",IDC_BTN_DEL,112,109,38,14
+    CONTROL         "",IDC_LIST_MAP,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,12,18,207,85
+    GROUPBOX        "脚本程序映射",IDC_STATIC,5,5,221,124
+END
+
+IDD_CONFIG_LOG DIALOGEX 0, 0, 240, 146
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,5,5,221,37
+    GROUPBOX        "",IDC_STATIC,5,49,221,37
+    CONTROL         "记录日志到窗口",IDC_CHECK_LOGTOWINDOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,6,69,8
+    LTEXT           "窗口显示的最大行数:",IDC_STATIC,12,23,77,8
+    EDITTEXT        IDC_EDIT_MAXLOGWNDLINE,91,21,38,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    CONTROL         "记录日志到文件",IDC_CHECK_LOGTOFILE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,50,69,8
+    EDITTEXT        IDC_EDIT_LOGFILENAME,43,64,156,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "...",IDC_BTN_BROWSE,203,64,15,12,BS_CENTER | BS_VCENTER | 
+                    BS_FLAT
+    LTEXT           "文件名:",IDC_STATIC,12,66,29,8
+    LTEXT           "(0为不限制)",IDC_STATIC,133,23,63,8
+END
+
+IDD_ENGINE DIALOGEX 0, 0, 228, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "添加/编辑脚本映射"
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_EXTNAME,56,16,60,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_ENGINEPATH,56,35,140,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "...",IDC_BTN_BROWSE,200,35,15,12,BS_CENTER | BS_VCENTER | 
+                    BS_FLAT
+    DEFPUSHBUTTON   "确定",IDOK,133,65,39,14
+    PUSHBUTTON      "取消",IDCANCEL,182,65,39,14
+    LTEXT           "扩展名:",IDC_STATIC,11,17,31,8
+    LTEXT           "可执行文件:",IDC_STATIC,10,37,45,8
+    GROUPBOX        "",IDC_STATIC,5,5,216,53
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_MAIN           ICON                    "res\\EasyWebSvr.ico"
+IDI_LEDSTOP             ICON                    "res\\LedStop.ico"
+IDI_LEDRUN              ICON                    "res\\LedRun.ico"
+IDI_SHOWMENU            ICON                    "res\\ShowMenu.ico"
+IDI_TRAYSTOP            ICON                    "res\\TrayStop.ico"
+IDI_TRAYRUN             ICON                    "res\\TrayRun.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,9,0,0
+ PRODUCTVERSION 1,9,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "EasyWebServer V1.92"
+            VALUE "FileVersion", "1.92 Build 2007.11.14"
+            VALUE "InternalName", "EasyWebServer"
+            VALUE "LegalCopyright", "版权所有 (C) 2007 王宝剑"
+            VALUE "OriginalFilename", "EasyWebSvr.exe"
+            VALUE "ProductName", "EasyWebServer"
+            VALUE "ProductVersion", "1, 9, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

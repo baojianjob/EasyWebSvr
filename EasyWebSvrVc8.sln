@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cgi1", "Demo\Cgi1\Cgi1.vcproj", "{D56F59CC-374D-4AAF-8B33-BB19B15E020E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cgi2", "Demo\Cgi2\Cgi2.vcproj", "{331323EF-F824-4BC1-9531-5C3173E0C3E8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EasyWebSvr", "EasyWebSvr\EasyWebSvr.vcproj", "{F2B8DEF3-4E71-4F41-ADEB-6A6CC29BA907}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IsaChat", "Demo\IsaChat\IsaChat.vcproj", "{964866CC-ACF0-491B-BA5C-E520DAB08657}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IsaCookie", "Demo\IsaCookie\IsaCookie.vcproj", "{2E2B44C0-8E0A-491C-83E8-8EB2BA09D07A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Isapi1", "Demo\Isapi1\Isapi1.vcproj", "{50FC1C8B-DDEE-43B8-8EB9-E0007598A9F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D56F59CC-374D-4AAF-8B33-BB19B15E020E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D56F59CC-374D-4AAF-8B33-BB19B15E020E}.Debug|Win32.Build.0 = Debug|Win32
+		{D56F59CC-374D-4AAF-8B33-BB19B15E020E}.Release|Win32.ActiveCfg = Release|Win32
+		{D56F59CC-374D-4AAF-8B33-BB19B15E020E}.Release|Win32.Build.0 = Release|Win32
+		{331323EF-F824-4BC1-9531-5C3173E0C3E8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{331323EF-F824-4BC1-9531-5C3173E0C3E8}.Debug|Win32.Build.0 = Debug|Win32
+		{331323EF-F824-4BC1-9531-5C3173E0C3E8}.Release|Win32.ActiveCfg = Release|Win32
+		{331323EF-F824-4BC1-9531-5C3173E0C3E8}.Release|Win32.Build.0 = Release|Win32
+		{F2B8DEF3-4E71-4F41-ADEB-6A6CC29BA907}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F2B8DEF3-4E71-4F41-ADEB-6A6CC29BA907}.Debug|Win32.Build.0 = Debug|Win32
+		{F2B8DEF3-4E71-4F41-ADEB-6A6CC29BA907}.Release|Win32.ActiveCfg = Release|Win32
+		{F2B8DEF3-4E71-4F41-ADEB-6A6CC29BA907}.Release|Win32.Build.0 = Release|Win32
+		{964866CC-ACF0-491B-BA5C-E520DAB08657}.Debug|Win32.ActiveCfg = Debug|Win32
+		{964866CC-ACF0-491B-BA5C-E520DAB08657}.Debug|Win32.Build.0 = Debug|Win32
+		{964866CC-ACF0-491B-BA5C-E520DAB08657}.Release|Win32.ActiveCfg = Release|Win32
+		{964866CC-ACF0-491B-BA5C-E520DAB08657}.Release|Win32.Build.0 = Release|Win32
+		{2E2B44C0-8E0A-491C-83E8-8EB2BA09D07A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E2B44C0-8E0A-491C-83E8-8EB2BA09D07A}.Debug|Win32.Build.0 = Debug|Win32
+		{2E2B44C0-8E0A-491C-83E8-8EB2BA09D07A}.Release|Win32.ActiveCfg = Release|Win32
+		{2E2B44C0-8E0A-491C-83E8-8EB2BA09D07A}.Release|Win32.Build.0 = Release|Win32
+		{50FC1C8B-DDEE-43B8-8EB9-E0007598A9F7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{50FC1C8B-DDEE-43B8-8EB9-E0007598A9F7}.Debug|Win32.Build.0 = Debug|Win32
+		{50FC1C8B-DDEE-43B8-8EB9-E0007598A9F7}.Release|Win32.ActiveCfg = Release|Win32
+		{50FC1C8B-DDEE-43B8-8EB9-E0007598A9F7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
