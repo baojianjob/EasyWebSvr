@@ -2,58 +2,32 @@
 功能： Web服务器
 
 待改进：
-//1. 限制ContentLength最大上传文件大小
-//2. 超大文件下载分段发送
-3. 执行CGI进程限制时间
-//4. 支持ISAPI
-5. 测试接收、解析、执行、发送、日志的时间，提高效率
-//6. exe资源版本信息
-7. 虚拟目录
-8. 环境变量
-/9. 处理http头中文件是否修改、是否保持连接
-//10. 支持php
-11. 处理RecvError，连接Reset
-12. 提高批量日志ListBox的效率
-//13. 对ISAPI的dll进行缓存
-//14. cgi、ISAPI测试示例
-//15. 支持文件下载断点续传
-//16. 修正可以用..越级访问的Bug
-//17. 增加对中文utf-8编码的支持
-18. 设置界面tab键不正常的Bug
-//19. 开机自动运行时启动、最小化
-//20. 服务器运行中和停止时，设置不同的托盘图标和托盘提示
-//21. 菜单中增加直接打开浏览器访问主页
-//22. 允许执行CGI/ISAPI默认不选
-23. 考虑后缀名为.cgi的CGI程序
-24. 检查wsprintf,strcpy等可能的缓冲区溢出
-//25. CGI的Cookie等环境变量
-26. CGI进程意外死掉的处理
-//27. 完善开机运行
-28. 访问 复件%20README 不正常的Bug
-//29. cgi1.exe/aaa 要能访问到cgi1.exe
-30. 支持cgi/isapi聊天室，持续连接
-31. 到Win98下测试
-32. 完善“关于”界面
-//33. HTTP_REFERER 标志
-//34. Location 重新定位标志
-35. 匿名访问的相关限制
-26. 测试http协议的标准性，和IIS做对比
-27. 支持HTTPS SSL
-28. 阻止在cgi/isapi程序中弹出MessageBox
-29. ISAPI Location网页重定向
-//30. 执行cgi程序时，返回的http头中缺少EasyWebServer标志
-//31. 支持HEAD
-32. 考虑主目录为相对路径
-//33. 限制HTTP头的\r\n\r\n前的最大长度
-34. POST普通文件时，提示405 Method Not Allowed
-//35. 右下角图标启动/停止
-//36. CGI Location
+1. 执行CGI进程限制时间
+2. 测试接收、解析、执行、发送、日志的时间，提高效率
+3. 虚拟目录
+4. 环境变量
+5. 处理RecvError，连接Reset
+6. 提高批量日志ListBox的效率
+7. 设置界面tab键不正常的Bug
+8. 考虑后缀名为.cgi的CGI程序
+9. 检查wsprintf,strcpy等可能的缓冲区溢出
+10. CGI进程意外死掉的处理
+11. 访问 复件%20README 不正常的Bug
+12. 支持cgi/isapi聊天室，持续连接
+13. 到Win98下测试
+14. 完善“关于”界面
+15. 匿名访问的相关限制
+16. 测试http协议的标准性，和IIS做对比
+17. 支持HTTPS SSL
+18. 阻止在cgi/isapi程序中弹出MessageBox
+19. ISAPI Location网页重定向
+20. 考虑主目录为相对路径
+21. POST普通文件时，提示405 Method Not Allowed
 
 测试cgi上传/下载大文件
 精简代码，提高效率
 日志改为返回代码，而非成功/失败
 设置改变后，必要重启时才重启
-//重启explorer后，托盘图标状态错误的Bug
 url中含有\n的Bug
 界面颜色、刷新问题
 支持用户授权认证
@@ -229,8 +203,8 @@ isapi keepalive
 
 2005.12.20
 初版，实现了对静态网页的支持
-
 */
+
 #include "stdafx.h"
 #include "websvr.h"
 #include "cmncode.h"
@@ -1156,7 +1130,7 @@ void CWebServerThread::BuildCgiEnvironment(const CRequestData &RequestData, MemF
     TCHAR TempStr[2048]; // 注意溢出------------
 
     // SERVER_SOFTWARE
-    const char *pServerSoftware = "SERVER_SOFTWARE="WEBSERVER_NAME_VERSION;
+    const char *pServerSoftware = "SERVER_SOFTWARE=" WEBSERVER_NAME_VERSION;
     MemFile.Write(pServerSoftware, lstrlen(pServerSoftware) + 1);
 
     // SERVER_PROTOCOL

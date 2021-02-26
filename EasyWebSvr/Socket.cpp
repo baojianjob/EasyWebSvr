@@ -57,10 +57,7 @@ bool BaseSOCKET::IsWriteable()
 int BaseSOCKET::SendTo(const void *pBuf, int BufLen, UINT HostPort, const char *pHostAddress, int Flags)
 {
   SOCKADDR_IN sockAddr;
-
   memset(&sockAddr, 0, sizeof(sockAddr));
-
-  //LPSTR lpszAscii = T2A((LPTSTR)pHostAddress);
   sockAddr.sin_family = AF_INET;
 
   if (pHostAddress == NULL)
